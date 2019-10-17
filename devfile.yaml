@@ -1,13 +1,14 @@
+---
+apiVersion: 1.0.0
 metadata:
-  name: wksp-iv76
-commands: []
+  generateName: tekton-test-
 projects:
   - source:
       location: 'https://github.com/openshift-labs/lab-tekton-pipelines/'
       type: git
     name: Tekton
 components:
-  - args: []
+  - 
     env:
       - name: JAVA_OPTS
         value: >-
@@ -20,28 +21,14 @@ components:
     endpoints:
       - name: 8080/tcp
         port: 8080
-        attributes: {}
-    selector: {}
     memoryLimit: 768Mi
     alias: tools
-    command: []
     mountSources: true
     image: 'quay.io/eclipse/che-java8-maven:7.2.0'
-    entrypoints: []
     volumes:
       - containerPath: /home/user/.m2
         name: m2
-    preferences: {}
     type: dockerimage
-  - args: []
-    env: []
-    endpoints: []
-    selector: {}
-    command: []
-    entrypoints: []
-    volumes: []
-    preferences: {}
+  - 
     id: redhat/vscode-yaml/latest
     type: chePlugin
-apiVersion: 1.0.0
-attributes: {}
